@@ -1,0 +1,44 @@
+<!-- Crea uno script che:
+Al click del bottone inserisca la modalità dark -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .theme {
+        background-color: black;
+        color: white;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Dark Mode</h1>
+    <div>
+      <button class="btn">Dark Mode</button>
+    </div>
+<script>
+  // aspetta che il DOM sia pronto. L’evento DOMContentLoaded si attiva quando il browser ha finito di caricare e parse-re (analizzare) l’intero albero DOM dell’HTML.
+  // document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelector('.btn');
+    const body = document.body;
+
+    btn.addEventListener('click', () => {
+      // alterna la classe "theme" sul body quando clicchi
+      body.classList.toggle('theme');
+    //   body è il riferimento all’elemento <body> della pagina. classList è una collezione delle classi CSS applicate a quell’elemento. toggle('theme') controlla se <body> ha già la classe theme: Se no, la aggiunge, attivando lo sfondo scuro e il testo chiaro (come definito in .theme { … } nel css). Se sì, la rimuove, riportando lo stile al suo stato originale.
+    
+      // cambio colore del testo del bottone da modalità notte a giorno
+      if (body.classList.contains('theme')) {
+        btn.textContent = 'Light Mode';
+      } else {
+        btn.textContent = 'Dark Mode';
+      }
+    });
+  // });
+</script>
+  </body>
+</html>
