@@ -35,7 +35,7 @@
     renderPrintedForm(savedData);
   }
 
-  // 4. Al click su “Salva” creo l’oggetto formDatax
+  // 4. Al click su “Salva” creo l’oggetto formData
   saveBtn.addEventListener('click', () => {
     const formData = {
       firstname: firstnameInput.value.trim(),
