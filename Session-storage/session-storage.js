@@ -46,4 +46,8 @@
     // salvo in sessionStorage
     sessionStorage.setItem('formData', JSON.stringify(formData));
 
+    // aggiorno lo span del titolo e il paragrafo di riepilogo. In questo modo al reload della pagina il nome nel titolo rimane e l’intero form può essere recuperato e mostrato.
+    titleNameSpan.textContent = formData.firstname;
+    renderPrintedForm(formData);
+    
   })
